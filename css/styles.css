@@ -163,7 +163,8 @@
   }
   .site-credit a {
     color: #9c958b;
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
   .site-credit a:hover { color: var(--ui-text); }
   .link-btn {
