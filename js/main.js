@@ -617,7 +617,7 @@ async function start() {
   } else if (urlGrid >= 2 && urlGrid <= 4) {
     runGrid(urlGrid);
   } else {
-    const entry = { mode: "single", seed: randomSeeds(1, INIT_SEED)[0] };
+    const entry = { mode: "single", seed: randomSeeds(1)[0] };
     pushState(entry);
     applyState(entry);
   }
