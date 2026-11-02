@@ -173,7 +173,7 @@ fn shift_col(rng: &mut Rng, c: [f64; 3], hue_shift: f64) -> [f64; 3] {
 
 pub fn gen_params(rng: &mut Rng) -> Params {
     // Everything below intentionally follows the evaluation order of the JS
-    // object literal in params.js. Do not reorder: the RNG is stateful.
+    // Do not reorder: the RNG is stateful.
     let pal = *rng.choice(&PALETTES);
     let hue_shift = rng.rand_range(-14.0, 14.0);
 

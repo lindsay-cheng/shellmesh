@@ -1,7 +1,7 @@
 //! Deterministic PRNG, Perlin noise, and small formatting helpers.
 //!
 //! Bit-accurate xorshift32 + 3D Perlin noise + Fast2Sum push_f1/push_f3.
-//! `hslCss` helper from `js/palette.js`.
+//! HSL CSS formatting helper.
 
 
 pub const PERLIN_SIZE: usize = 4095;
