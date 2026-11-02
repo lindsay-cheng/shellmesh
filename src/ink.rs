@@ -1,7 +1,5 @@
 //! Ink line-art: seam sulci, growth rings, co-rendered contours, capillary
 //! veins, striae, suture ticks, and the dorsal keel.
-//!
-//! Port of `js/ink.js`. Stroke order and RNG draws follow the JS sequence.
 
 use crate::carapace::{CarapaceGraph, PatternPoly, Scute};
 use crate::geometry::{

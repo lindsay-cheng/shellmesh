@@ -1,6 +1,6 @@
 //! Deterministic PRNG, Perlin noise, and small formatting helpers.
 //!
-//! This is a bit-accurate port of `js/prng.js`, `js/names.js`, and the
+//! Bit-accurate xorshift32 + 3D Perlin noise + Fast2Sum push_f1/push_f3.
 //! `hslCss` helper from `js/palette.js`.
 
 
@@ -103,7 +103,7 @@ impl Rng {
         }
     }
 
-    /// Port of `rawNoise`. The `perlin` table is `Float32Array` in JS, so
+    /// The `perlin` table is `Float32Array` in JS, so
     /// values are widened from `f32` exactly as the browser does.
     pub fn raw_noise(&self, x: f64, y: f64, z: f64) -> f64 {
         let x = if x < 0.0 { -x } else { x };
@@ -260,7 +260,7 @@ pub fn push_u64(buf: &mut String, mut n: u64) {
     buf.push_str(s);
 }
 
-/// Exact, zero-allocation port of JS `v.toFixed(1)` using Fast2Sum on `10*x = 2*(4*x + x)`.
+/// Zero-allocation formatting of JS `v.toFixed(1)` using Fast2Sum on `10*x = 2*(4*x + x)`.
 /// Since multiplying by 4 and 2 are exact exponent shifts in IEEE-754,
 /// `s = 2*(4*x + x)` and `err = 2*(x - (s/2 - 4*x))` give the exact 106-bit
 /// product `10 * x = s + err` in 5 float ops (no string formatting needed).

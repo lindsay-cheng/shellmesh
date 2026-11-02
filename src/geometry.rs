@@ -1,6 +1,5 @@
 //! Geometry utilities shared by the carapace graph, pigment engine, and ink
-//! pass. Port of `js/geometry.js` plus the consolidated distance/clipping
-//! helpers from `js/pigment.js`.
+//! pass. Consolidated distance/clipping helpers from `js/pigment.js`.
 
 use crate::carapace::{CarapaceGraph, Scute};
 use crate::prng::{clamp, lerp, Rng};

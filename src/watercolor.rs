@@ -1,6 +1,6 @@
 //! Watercolor wash layers via evolutionary polygon distortion.
 //!
-//! Port of `js/watercolor.js`. Technique adapted from
+//! Technique adapted from
 //! `@watercolorizer/watercolorizer` by J. Holmes (ISC).
 
 use crate::geometry::{Pt};

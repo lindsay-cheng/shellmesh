@@ -1,6 +1,6 @@
 //! Palette table and parameter gene dictionary.
 //!
-//! Exact port of `js/palette.js` and `js/params.js`. The order of every
+//! Biological palettes and gene dictionary. The order of every
 //! `Rng::rand()` call is preserved.
 
 use crate::prng::{clamp, Rng};

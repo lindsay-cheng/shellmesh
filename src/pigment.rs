@@ -1,6 +1,6 @@
 //! Watercolor pigment engine: wash layers, pattern archetypes, and areolae.
 //!
-//! Port of `js/pigment.js`. RNG draws keep the JS evaluation order: each value
+//! RNG draws keep the JS evaluation order: each value
 //! drawn from the RNG is bound to a local before any call that also borrows it.
 
 use core::f64::consts::PI;

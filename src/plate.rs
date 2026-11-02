@@ -1,6 +1,6 @@
 //! Complete SVG plate assembly and grid layout.
 //!
-//! Port of `js/plate.js` plus the grid builder from `js/main.js`.
+//! SVG plate assembly and grid layout.
 
 use std::fmt::Write as _;
 

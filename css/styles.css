@@ -206,6 +206,8 @@
   }
   .modal-body p { margin-bottom: 8px; color: #b9b2a6; }
   .modal-body strong { color: var(--ui-text); font-weight: normal; }
+  .modal-body a.info-link { color: #9c958b; text-decoration: underline; text-underline-offset: 3px; }
+  .modal-body a.info-link:hover { color: var(--ui-text); }
   .shortcuts {
     display: inline-grid;
     grid-template-columns: auto auto;

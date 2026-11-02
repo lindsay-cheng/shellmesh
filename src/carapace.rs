@@ -1,6 +1,6 @@
 //! Carapace silhouette and shared-edge topological graph.
 //!
-//! Port of `js/carapace.js`. Geometry and RNG call order are preserved.
+//! Geometry and RNG call order are preserved.
 
 use crate::geometry::{
     concat_edges, make_perturbed_edge, poly_bounds, Bounds, Pt,
