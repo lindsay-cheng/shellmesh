@@ -17,6 +17,8 @@
     justify-content: center;
     min-height: 100vh;
     max-height: 100vh;
+    min-height: 100dvh;
+    max-height: 100dvh;
     overflow: hidden;
     padding: 10px 16px;
     gap: 10px;
@@ -246,8 +248,11 @@
     }
     .stage {
       width: min(calc(100vw - 20px), calc((100vh - 190px) * var(--stage-ratio))) !important;
+      width: min(calc(100vw - 20px), calc((100dvh - 190px) * var(--stage-ratio))) !important;
       max-width: 100%;
     }
+    input[type="text"] { font-size: 16px; }
+    button, select { padding: 8px 13px; }
     .footer { flex-wrap: wrap; gap: 8px; }
     .site-credit { position: static; margin-top: 2px; }
   }
