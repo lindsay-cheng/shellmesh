@@ -161,6 +161,11 @@
     color: #7d776f;
     z-index: 20;
   }
+  .site-credit a {
+    color: #9c958b;
+    text-decoration: none;
+  }
+  .site-credit a:hover { color: var(--ui-text); }
   .link-btn {
     background: none;
     border: none;
