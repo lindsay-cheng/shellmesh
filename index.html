@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>shellmesh - generative carapace</title>
+<link rel="stylesheet" href="css/styles.css?v=8">
+</head>
+<body>
+<div class="toolbar">
+  <input type="text" id="seedInput" placeholder="seed or leave empty for Latin..." spellcheck="false" maxlength="60" />
+  <button id="btnGenerate">Generate</button>
+  <button id="btnRandom">Random</button>
+  <button id="btnAnimate">Redraw</button>
+  <span id="gridSizeWrap"><select id="gridSize">
+    <option value="2">2×2</option>
+    <option value="3" selected>3×3</option>
+    <option value="4">4×4</option>
+  </select></span>
+</div>
+
+<div class="content">
+  <div class="modetabs">
+    <button id="modeSingle" class="mode-btn active">Single</button>
+    <button id="modeGrid" class="mode-btn">Grid</button>
+  </div>
+  <div class="stage" id="stage"></div>
+  <div class="movenavs">
+    <button id="btnBack" disabled>Back</button>
+    <button id="btnFwd" disabled>Fwd</button>
+  </div>
+</div>
+<div class="footer">
+  <div class="meta" id="metaInfo"></div>
+  <div class="footer-actions">
+    <button id="btnDownload">SVG</button>
+    <button id="btnDownloadPng">PNG</button>
+  </div>
+</div>
+
+<div class="site-credit">
+  <span>lindsay cheng</span>
+  <span class="sep">·</span>
+  <button id="btnCredits" class="link-btn">info</button>
+</div>
+
+<div id="creditsModal" class="modal-backdrop" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="creditsTitle">
+    <div class="modal-head">
+      <span id="creditsTitle">shellmesh / credits</span>
+      <button id="btnCloseCredits" class="link-btn">close [esc]</button>
+    </div>
+    <div class="modal-body">
+      <p><strong>author:</strong> lindsay cheng</p>
+      <p><strong>engine:</strong> rust + webassembly + web workers (zero external dependencies)</p>
+      <p><strong>inspiration:</strong> fishdraw (lingdong huang)</p>
+      <p><strong>watercolor technique:</strong> adapted from tyler hobbs &amp; j. holmes (<code>@watercolorizer/watercolorizer</code>, isc license)</p>
+      <p><strong>shortcuts:</strong></p>
+<div class="shortcuts">
+  <span class="key"><code>space</code> / <code>r</code></span><span class="desc">random</span>
+  <span class="key"><code>←</code> / <code>→</code></span><span class="desc">back / fwd</span>
+  <span class="key"><code>d</code></span><span class="desc">redraw</span>
+  <span class="key"><code>g</code></span><span class="desc">single / grid</span>
+</div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js?v=8"></script>
+</body>
+</html>
