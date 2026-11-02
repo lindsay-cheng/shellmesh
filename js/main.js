@@ -404,11 +404,11 @@ function animateDrawing() {
     // blotches appear one at a time, in paint order
     washes.forEach((p, i) => {
       drawTimers.push(setTimeout(() => {
-        p.style.transition = "opacity 0.3s ease-out";
+        p.style.transition = "opacity 0.1s ease-out";
         p.style.opacity = "1";
-      }, i * 30));
+      }, Math.round(i * 10)));
     });
-    let t = washes.length * 30 + 300;
+    let t = washes.length * 10 + 100;
 
     // ink traces one stroke at a time: seams, then rings, then fine batches
     const queue = [...traces, ...batches];
@@ -417,18 +417,18 @@ function animateDrawing() {
       const at = t;
       if (isBatch) {
         drawTimers.push(setTimeout(() => {
-          p.style.transition = "opacity 0.4s ease-out";
-          p.style.opacity = "1";
-        }, at));
-        t += 120;
+          p.style.transition = "opacity 0.13s ease-out";
+        p.style.opacity = "1";
+      }, at));
+        t += 40;
       } else {
         const len = parseFloat(p.dataset.len || "300");
-        const dur = Math.min(0.5, Math.max(0.08, len / 800));
+        const dur = Math.min(0.167, Math.max(0.027, len / 2400));
         drawTimers.push(setTimeout(() => {
           p.style.transition = `stroke-dashoffset ${dur}s cubic-bezier(0.25, 0.1, 0.25, 1)`;
           p.style.strokeDashoffset = "0";
         }, at));
-        t += dur * 1000 * 0.4;
+        t += dur * 1000 * 0.4 / 3;
       }
     });
   });
